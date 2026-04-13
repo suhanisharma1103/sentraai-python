@@ -16,6 +16,7 @@ LOW_CONFIDENCE_THRESHOLD = 0.45    # warn but allow through
 # === Load training data ===
 print("Loading training data...")
 df = pd.read_csv("train.csv")
+df = df.sample(n=1000, random_state=42)
 documents = [
     Document(page_content=text, metadata={"label": int(label)})
     for text, label in zip(df["text"].astype(str), df["label"].astype(int))
