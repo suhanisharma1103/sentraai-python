@@ -1,0 +1,8 @@
+flask
+flask-cors
+pandas
+langchain-core
+langchain-community
+langchain
+sentence-transformers
+chromadb

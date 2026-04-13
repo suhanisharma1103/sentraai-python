@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: sentraai-python
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python promptInjectionDetector.py
+    envVars:
+      - key: PYTHON_ENV
+        value: production
