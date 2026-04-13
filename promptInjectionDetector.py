@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pandas as pd
@@ -89,4 +91,5 @@ def check_prompt():
 
 if __name__ == "__main__":
     print("Starting Flask server on port 9000...")
-    app.run(host="0.0.0.0", port=9000)
+    port = int(os.environ.get("PORT", 9000))
+    app.run(host="0.0.0.0", port=port)
